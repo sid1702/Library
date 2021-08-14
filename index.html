@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header class="heading">
+        <h1>Your personal Library</h1>
+    </header>
+
+    <main class="main">
+        <button data-modal-target="#modal" class="add">Add Book</button>
+
+        <div class="modal" id="modal">
+            <div id="popUp">
+                <div class="modal-header">
+                    <div class="modalTitle">Add Details</div>
+                    <button data-close-button class="close">&times;</button>
+                </div>
+    
+                <div class="modal-body">
+                    <form id='form' action='/script.js'>
+                        <input type="text" class="title" placeholder="Title" required>
+                        <input type="text" class="author" placeholder="Author" required>
+                        <input type="text" class="pages" placeholder="Pages" required>
+                        
+                        <div class="completed">
+                            <label>Completed?</label>
+                            <input type="checkbox" class="read">
+                        </div>
+                        
+    
+                        <div class="footer">
+                            <div class="submit">Submit</div>
+                        </div>
+                        
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="card"></div>
+
+        <div id="overlay"></div>
+    </main>
+   <script type="text/javascript" src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,173 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+  }
+  body{
+    background-color: rgb(49, 64, 65);
+  }
+
+  h1{
+    text-align: center;
+    color:teal
+  }
+
+  .main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .add{
+    width:50%;
+    margin: 10px;
+    font-weight: 800;
+    font-size: medium;
+    background-color: teal;
+    color:white;
+  }
+ 
+ .add:hover{
+   background-color: rgb(53, 170, 170);
+ }
+
+  .modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+    border: 1px solid black;
+    border-radius: 10px;
+    z-index: 10;
+    width: 60%;
+    text-align: center;
+    background-color: rgb(53, 170, 170);
+  }
+
+  .modal.active {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  
+  .modal-header {
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+  }
+  
+  .modal-header .title {
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+  
+  .modal-header .close-button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+  
+  .modal-body {
+    padding: 10px 15px;
+  }
+
+  .footer{
+    display: flex;
+    justify-content: center;
+    width:100%;
+    margin: 10px;
+  }
+
+  .completed{
+    margin: 10px;
+  }
+
+  .submit{
+    background-color: green;
+    padding: 7px;
+    color:white
+  }
+
+  .close:hover{
+    background-color: rgb(221, 10, 10);
+
+  }
+
+  .submit:hover{
+    background-color: rgb(30, 190, 30);
+  }
+  
+  #overlay {
+    position: fixed;
+    opacity: 0;
+    transition: 200ms ease-in-out;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .5);
+    pointer-events: none;
+  }
+  
+  #overlay.active {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  .card{
+    width:400px;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    gap:10px;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .cardDiv{
+    border: 1px solid black;
+    padding: 10px;
+    width:60%;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border:1px solid white;
+  }
+
+  .cardRead{
+    width:100%;
+    text-align: center;
+    margin:20px;
+    padding:5px;
+  }
+
+  .delete{
+    background-color:rgb(221, 10, 10);
+    width:100%;
+    padding:5px;
+    margin:10px;
+  }
+
+  .delete:hover{
+    background-color:rgb(167, 17, 17);
+  }
+
+
+  @media(min-width: 768px){
+    .card{
+      gap: 30px;
+    }
+  }
+
+  @media(min-width: 1024px){
+    .card{
+      gap: 40px;
+    }
+  }
